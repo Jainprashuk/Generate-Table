@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { RemoveRedEye as RemoveRedEyeIcon, GetApp as DownloadIcon, Delete as DeleteIcon } from "@mui/icons-material";
 import { TableBodyProps } from './types'
 import { formatDate, formatNumberForCurrency } from "./utils";
-// import '../../styles/global.css'
+import '../App.css'
 import { useState } from "react";
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import SaveIcon from "@mui/icons-material/Save";
