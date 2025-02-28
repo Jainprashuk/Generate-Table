@@ -30,14 +30,13 @@ import {
     CheckedItems,
     GenerateTableProps,
     Transformation,
-    DropResult,
+    // DropResult,
    
 
 } from "./types";
 import TableFooter from './TableFooter';
 import TableBody from './TableBody';
 import { AddCircle, Delete } from "@mui/icons-material";
-import { filter, set } from 'lodash';
 export interface TextInputRef {
     rowExpand: (rowindex: number | null) => void;
     getSelectedRows : () => any[];
@@ -2020,17 +2019,17 @@ const GenerateTable: React.FC<GenerateTableProps> = ({
         });
     };
    
-    const handleColumnDragEnd = (result: DropResult) => {
-        const { source, destination } = result;
+    // const handleColumnDragEnd = (result: DropResult) => {
+    //     const { source, destination } = result;
 
-        if (!destination || destination.index === source.index) {
-            return;
-        }
-        const reorderedColumns = Array.from(columns);
-        const [movedColumn] = reorderedColumns.splice(source.index, 1);
-        reorderedColumns.splice(destination.index, 0, movedColumn);
-        setColumns(reorderedColumns);
-    };
+    //     if (!destination || destination.index === source.index) {
+    //         return;
+    //     }
+    //     const reorderedColumns = Array.from(columns);
+    //     const [movedColumn] = reorderedColumns.splice(source.index, 1);
+    //     reorderedColumns.splice(destination.index, 0, movedColumn);
+    //     setColumns(reorderedColumns);
+    // };
     useEffect(() => {
         filterData(checkedItems, searchTerm);
     }, [columnFilters, checkedItems]);
